@@ -1,0 +1,5 @@
+export const openModal =() => useState<boolean>('open', () => false)
+export const openFFaq =() => useState<boolean>('faq1', () => false)
+export const openSFaq =() => useState<boolean>('faq2', () => false)
+export const openTFaq =() => useState<boolean>('faq3', () => false)
+export const openLFaq =() => useState<boolean>('faq4', () => false)

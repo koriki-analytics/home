@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+
+@theme{
+  --color-primary: #008080;
+  --color-btn: #ffffff;
+  --color-secondary:#0A0A0B;
+  --colot-text:#0A0A0B;
+  --color-tetiary:#EEFFFC;
+  --text-dashboard: 64px;
+  --text-mdashboard: 40px;
+  --text-p: 24px;
+  --text-pmobile: 12px;
+  --text-heading: 48px;
+  --text-headingmobile: 24px;
+  --text-mp: 32px;
+  --font-hubot: Hubot-Sans;
+  --text-wedo: 48px;
+  --text-wedosub: 41.12px;
+  --text-wedosubm: 20px;
+  --text-mid:16px;
+  --text-smallest:14px;
+  --color-web:#FFC61B;
+  --color-weborange: #FFA400;
+  --color-link:#FFDA46;
+  --color-textsm:#676873;
+  --color-darkprimary: #003235;
+  --color-cod: #82848E
+
+}
+
+body{
+  overflow-x: hidden;
+  font-family: Hubot-Sans;
+}
+
+@font-face {
+  font-family: Hubot-Sans;
+  font-display: swap;
+  src: url('../font/Hubot.ttf');
+}
+
+
