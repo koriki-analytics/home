@@ -6,16 +6,16 @@
         <div class="flex justify-between gap-3 mb-[27px]">
           <div class="rounded-[15px] border-1 border-cod w-1/2 pl-2 ">
             <p>First Name</p>
-            <input placeholder="John">
+            <input class="focus:outline-0 w-full py-1" placeholder="John">
           </div>
           <div class="rounded-[15px] border-1 border-cod w-1/2 pl-2">
           <p>Last Name</p>
-          <input placeholder="Smith">
+          <input class="w-full focus:outline-0 py-1" placeholder="Smith">
           </div>
         </div>
         <div class="rounded-[15px] border-1 border-cod w-full pl-2 ">
           <p>Email Address</p>
-          <input placeholder="example@gmail.com">
+          <input class="focus:outline-0 w-full py-1" placeholder="example@gmail.com">
         </div>
         <button class="bg-primary w-full h-15 rounded-[15px] mt-[34px] text-btn">Join the waitlist</button>
       </form>
