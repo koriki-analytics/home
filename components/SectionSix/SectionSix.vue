@@ -18,7 +18,7 @@
         <button @click="handleLToggle" class="flex items-center justify-between w-full"><h6 class="text-smallest font-medium text-left">Where do I sign up?</h6> <img v-if="!togglel" class="size-10 " src="../../assets/pretoggle.svg"> <img v-if="togglel" class="size-10" src="../../assets/toggle.svg"></button>
         <p v-if="togglel" class=" text-textsm text-[13px]">Koriki aggregates data from all your marketing channels and simplifies the analytics, reporting and content management. Koriki is not just about creating content and scheduling posts, it’s about deriving insights from those posts and using those insights to fuel your growth.</p>
       </div>
-      <span class="text-[12px] text-[22px] font-semibold text-white my-9 text-center">Got more questions? <span class="font-normal">Reach out to us at <a class="text-link underline" > hello@koriki.io</a></span></span>
+      <span class="text-[12px] text-[22px] font-semibold text-white my-9 text-center">Got more questions? <span class="font-normal">Reach out to us at <a class="text-link underline cursor-pointer" > hello@koriki.io</a></span></span>
 
     </div>
   </section>
