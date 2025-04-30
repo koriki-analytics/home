@@ -91,7 +91,6 @@
         trigger: trigger,
         start: '0% 0%',
         end: '50% 50%',
-        markers: true
       }
     })
       tl.fromTo(scrollLeft, {
