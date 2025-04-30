@@ -1,7 +1,8 @@
 <template>
-  <dialog class="w-[100vw] h-[100vh] bg-black opacity-99 flex justify-center items-center fixed z-3 " v-if="open" >
-    <div class="w-[668px]" >
-      <div class="bg-primary flex justify-end pr-14 rounded-t-[15px]"><button @click="handleClose" class="text-btn h-15">X</button></div>
+  <dialog class=" w-[100vw] h-[100vh] bg-transparent flex justify-center items-center fixed z-3 cal" v-if="open" >
+    <div class="overlay"></div>
+    <div class="w-[668px] backdrop z-3 " >
+      <div class="bg-primary flex justify-end pr-14 rounded-t-[15px] "><button @click="handleClose" class="text-btn h-15">X</button></div>
       <form class="bg-white w-full px-10 pt-21 pb-16 rounded-b-[20px]">
         <div class="flex justify-between gap-3 mb-[27px]">
           <div class="rounded-[15px] border-1 border-cod w-1/2 pl-2 ">
@@ -22,6 +23,24 @@
     </div>
   </dialog>
 </template>
+
+<style scoped>
+  .overlay{
+    content:" ";
+    top: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    z-index: 1;
+    opacity: 0.8
+    
+  }
+  .cal{
+    
+  }
+</style>
 
 <script lang='ts' setup>
 import {openModal} from '../composables/states';
