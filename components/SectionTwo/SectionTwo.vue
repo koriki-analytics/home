@@ -9,16 +9,16 @@
                 <p class="text-[14px] md:text-[32px]"> /ˈkɔːrɪki/ (noun)</p>
               </article>
             <article>
-              <p class="text-pmobile md:text-mp"><span class="font-semibold">Etymology</span>: Derived from the Yoruba Phase Ki Orik, meaning <span>to sing one's praise </span></p>
+              <p class="text-pmobile md:text-mp"><span class="font-semibold">Etymology</span>: Derived from the Yoruba Phase <span class="font-semibold">Ki Oriki</span>, meaning <span class="text-primary font-semibold">to sing one's praise </span></p>
               
             </article>
             <article class="flex gap-5 mt-10">
               <ol start="1" class="list-decimal">
                 <li class="text-pmobile md:text-mp" >
-                  A belief – Like our culture, we believe your brand’s story should be heard by those that matter
+                  <span class="font-semibold">A belief </span>– Like our culture, we believe your brand’s story should be heard by those that matter
                 </li>
                 <li class="text-pmobile md:text-mp">
-                  A mission – Fueled by data and technology, we transform brands to reach their full potential
+                  <span class="font-semibold">A mission</span> – Fueled by data and technology, we transform brands to reach their full potential
                 </li>
               </ol>
             </article>

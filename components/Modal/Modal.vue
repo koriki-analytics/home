@@ -1,7 +1,7 @@
 <template>
   <dialog class=" w-[100vw] h-[100vh] bg-transparent flex justify-center items-center fixed z-3 cal font-hubot" v-if="open" >
-    <div class="overlay"></div>
-    <div class="flex z-5 md:h-9/10  h-fit items-center ">
+    <div @click="handleClose" class="overlay"></div>
+    <div class="flex z-5 md:h-8/10 w-6/10  h-fit items-center ">
       <div class="bg-white flex flex-col justify-center items-center gap-7 px-20 py-5 md:px-32 md:py-28 flex-2 w-5/10 h-full">
         <ModalIcon class="min-h-[250px]"/>
         <h1 class="text-mp font-bold">Join the Koriki Waitlist 🚀</h1>
@@ -24,8 +24,10 @@
           <button class="text-white bg-primary h-14 rounded-[15.26px] btn cursor-pointer">Join the waitlist</button>
         </form>
       </div>
-      <div class=" hidden lg:flex flex-1 w-2/10 h-full">
-        <img src="../../assets/image.jpg">
+      <div class=" hidden lg:flex flex-1 w-2/10 h-full bg-[url(@/assets/image.jpg)] bg-cover bg-repeat-none flex items-start justify-end px-3 py-5">
+        <button @click="handleClose" class="text-white size-fit" >
+          <CloseIcon/>
+        </button>
       </div>
       
     </div>
