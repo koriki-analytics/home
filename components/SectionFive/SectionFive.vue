@@ -10,7 +10,7 @@
             <p class="text-mid md:text-wedosubm  w-[255.7px] lg:w-[282px]">Streamline your strategy and scale faster.</p>
           </div>
         </div>
-        <div class="bg-tetiary max-w-360px w-fit rounded-b-[28px] z-2">
+        <div class="bg-tetiary max-w-360px w-fit rounded-b-[28px] z-2 scroll-up">
           <img src="../../assets/creators.png">
           <div class=" flex flex-col gap-2.5 px-[30.85px] py-[27.5px]">
             <h6 class="font-bold text-wedosubm md:text-p">Creators & Influencers</h6>
@@ -48,6 +48,8 @@
     const trigger = document.querySelector('.trigger')
     const scrollLeft = document.querySelector('.scroll-left')
     const scrollRight = document.querySelector('.scroll-right')
+    const scrollUp = document.querySelector('.scroll-up')
+    console.log(scrollUp)
 
     const bounce = document.querySelector('.bounce')
     const bounceItems = Array.from(bounce.childNodes)
@@ -84,34 +86,49 @@
   }, '<')
     }
 
-    else{
+    if(window.screen.width < 1030){
       const tl = gsap.timeline({
       duration: 1,
+
       scrollTrigger:{
         trigger: trigger,
         start: '0% 0%',
-        end: '50% 50%',
+        end: '90% 90%',
+        scrub:true,
       }
     })
       tl.fromTo(scrollLeft, {
-      yPercent: 90,
-      scale: 0.8
+      yPercent: 0,
+      scale: 1,
+      zIndex:3
     },
   {
     yPercent: 0,
-    scale: 1
+    scale: 1,
+    zIndex:3
   })
+
+    tl.fromTo(scrollUp, {
+      yPercent: -90,
+      scale: 0.8
+    },{
+      yPercent: 0,
+      scale:1
+    })
 
 
 
   tl.fromTo(scrollRight, {
-      yPercent: -90,
+      yPercent: -180,
       scale: 0.8
     },
   {
-    yPercent: 0,
+    yPercent: -90,
+    scale: 0.8
+  }, '<').to(scrollRight, {
+    yPercent:0,
     scale: 1
-  }, '<')
+  })
     }
 
   const tlbounce = gsap.timeline({
