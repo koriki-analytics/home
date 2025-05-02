@@ -59,7 +59,7 @@
       scrollTrigger:{
         trigger: trigger,
         start: 'top bottom',
-        end: 'bottom 90%',
+        end: '50% 50%',
         scrub: true
       }
     })
@@ -87,14 +87,25 @@
     }
 
     if(window.screen.width < 1030){
+      const last = gsap.timeline({
+        duration: 1,
+        scrollTrigger:{
+          trigger: scrollRight,
+          start: 'top 90%',
+          end: 'bottom 90%',
+          scrub: true,
+          markers:true
+        }
+      })
       const tl = gsap.timeline({
       duration: 1,
 
       scrollTrigger:{
         trigger: trigger,
         start: '0% 0%',
-        end: '90% 90%',
+        end: '50% 90%',
         scrub:true,
+        
       }
     })
       tl.fromTo(scrollLeft, {
@@ -115,20 +126,22 @@
       yPercent: 0,
       scale:1
     })
-
-
-
-  tl.fromTo(scrollRight, {
+    tl.fromTo(scrollRight, {
       yPercent: -180,
-      scale: 0.8
+      scale: 0.6
     },
   {
     yPercent: -90,
     scale: 0.8
-  }, '<').to(scrollRight, {
-    yPercent:0,
-    scale: 1
-  })
+  }, '<')
+
+    last.fromTo(scrollRight,{
+      yPercent: -90,
+      scale: 0.8
+    },{
+      yPercent: 0,
+      scale: 1
+    })
     }
 
   const tlbounce = gsap.timeline({

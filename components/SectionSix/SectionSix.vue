@@ -102,16 +102,28 @@ import { openFFaq, openLFaq, openSFaq, openTFaq } from '../composables/states';
 
   const handleToggle =()=>{
     toggle.value =!toggle.value
+    toggles.value = false
+    togglet.value = false
+    togglel.value = false
   }
   
   const handleSToggle =()=>{
     toggles.value =!toggles.value
+    toggle.value = false
+    togglet.value = false
+    togglel.value = false
   }
   const handleTToggle =()=>{
     togglet.value =!togglet.value
+    toggles.value = false
+    toggle.value = false
+    togglel.value = false
   }
   const handleLToggle =()=>{
     togglel.value =!togglel.value
+    toggles.value = false
+    togglet.value = false
+    toggle.value = false
   }
 
   
