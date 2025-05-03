@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-13 mb:22 lg:mb-58 lg:mt-44 flex justify-center font-hubot">
+  <section class="mt-13 mb:22 lg:mb-58 lg:mt-44 flex justify-center overflow-x-hidden font-hubot">
     <div class="flex flex-col lg:max-w-[1342px] items-center">
 
       <div class="flex justify-center">

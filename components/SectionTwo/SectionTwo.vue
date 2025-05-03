@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col items-center  mt-12 lg:mt-[12px]overflow-x-hidden font-hubot trigger">
+  <section class="flex flex-col items-center  mt-12 lg:mt-[12px] overflow-x-hidden font-hubot trig">
     <h1 class="text-headingmobile md:text-heading font-bold mb-12 lg:my-0">Our Story</h1>
     <div class="bg-[url(../../assets/image.jpg)] bg-size-[auto_full] bg-center bg-no-repeat w-full mt-[12px] md:mt-31">
       <div class="w-4/5 bg-tetiary rounded-tr-[112.68px] md:rounded-tr-[432px] px-8 py-6 md:px-31 md:py-23 border-dashed border-[#FFA400] border-3 border-l-0 train">
@@ -34,15 +34,15 @@
 
   onMounted(()=>{
     gsap.registerPlugin(ScrollTrigger)
-    const trigger = document.querySelector('.trigger')
+    const trig = document.querySelector('.trig')
     const train = document.querySelector('.train')
     const tl= gsap.timeline({
-      duration: 1,
+      duration: 0.5,
       ease: 'elastic',
       scrollTrigger:{
-        trigger: trigger,
-        start: 'top 10%',
-        end: 'top 10%',
+        trigger: trig,
+        start: '-10% 50%',
+        end: '-10%  90%',
       }
 
     })

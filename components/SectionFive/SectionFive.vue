@@ -3,7 +3,7 @@
     <div class="max-w-[1550px]">
       <h1 class="text-wedosubm font-bold mb-[26px] md:text-heading text-center lg:mb-[112px]">Who Should Use Koriki?</h1>
       <div class="flex flex-col lg:flex-row lg:gap-7 gap-[50px] items-center px-4 ">
-        <div class="bg-tetiary  lg:w-fit rounded-b-[28px] scroll-left">
+        <div class="bg-tetiary z-3  lg:w-fit rounded-b-[28px] scroll-left">
           <img  src="../../assets/brand.png">
           <div class=" flex flex-col gap-2.5 px-[30.85px] py-[27.5px]">
             <h6 class="font-bold text-wedosubm md:text-p">Brand & Businesses</h6>
@@ -49,7 +49,6 @@
     const scrollLeft = document.querySelector('.scroll-left')
     const scrollRight = document.querySelector('.scroll-right')
     const scrollUp = document.querySelector('.scroll-up')
-    console.log(scrollUp)
 
     const bounce = document.querySelector('.bounce')
     const bounceItems = Array.from(bounce.childNodes)
@@ -59,7 +58,7 @@
       scrollTrigger:{
         trigger: trigger,
         start: 'top bottom',
-        end: '50% 50%',
+        end: '50% 90%',
         scrub: true
       }
     })
@@ -87,37 +86,20 @@
     }
 
     if(window.screen.width < 1030){
-      const last = gsap.timeline({
-        duration: 1,
-        scrollTrigger:{
-          trigger: scrollRight,
-          start: 'top 90%',
-          end: 'bottom 90%',
-          scrub: true,
-          markers:true
-        }
-      })
       const tl = gsap.timeline({
       duration: 1,
 
       scrollTrigger:{
         trigger: trigger,
-        start: '0% 0%',
-        end: '50% 90%',
+        start: '0% bottom',
+        end: '90% 90%',
         scrub:true,
-        
       }
     })
-      tl.fromTo(scrollLeft, {
-      yPercent: 0,
-      scale: 1,
-      zIndex:3
-    },
-  {
-    yPercent: 0,
-    scale: 1,
-    zIndex:3
-  })
+    tl.set(scrollRight, {
+      yPercent: -180,
+      scale: 0.6
+    },'<')
 
     tl.fromTo(scrollUp, {
       yPercent: -90,
@@ -126,23 +108,19 @@
       yPercent: 0,
       scale:1
     })
-    tl.fromTo(scrollRight, {
-      yPercent: -180,
-      scale: 0.6
-    },
-  {
-    yPercent: -90,
-    scale: 0.8
-  }, '<')
 
-    last.fromTo(scrollRight,{
+    tl.to(scrollRight, {
       yPercent: -90,
       scale: 0.8
-    },{
-      yPercent: 0,
-      scale: 1
-    })
-    }
+    },'<')
+    
+  tl.fromTo(scrollRight, {
+    yPercent: -90,
+    scale: 0.8
+  },{
+    yPercent: 0,
+    scale: 1
+  }, '>')
 
   const tlbounce = gsap.timeline({
     duration: 0.1,
@@ -157,5 +135,7 @@
     )
 
     })
-  })
+  }
+})
+
 </script>

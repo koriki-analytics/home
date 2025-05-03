@@ -5,8 +5,15 @@
       <h1 class="text-mid md:text-[38px]
       lg:text-heading 2xl:text-dashboard md:text-right text-right">Be the First to Experience Koriki!</h1>
       <p class="text-pmobile text-right md:text-wedosubm lg:max-w-[687px] 2xl:text-mp 2xl:max-w-[980px]">Join the waitlist and get early access to the ultimate marketing intelligence platform. Stay ahead with AI-driven insights, automated reports, and seamless content management—all in one place</p>
-      <button class="bg-white text-[#000] w-[137px] h-[34px] md:h-[54px] md:w-55 rounded-[13px] btn">Join the waitlist</button>
+      <button class="bg-white text-[#000] w-[137px] h-[34px] md:h-[54px] md:w-55 rounded-[13px] btn" @click='handleOpen'>Join the waitlist</button>
     
     </div>
   </Section>
 </template>
+<script setup>
+  import { openModal } from '../composables/states';
+  const open = openModal()
+  const handleOpen=() =>{
+    open.value =!open.value
+  }
+</script>

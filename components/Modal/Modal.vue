@@ -1,8 +1,8 @@
 <template>
-  <dialog class=" w-[100vw] h-[100vh] bg-transparent flex justify-center items-center fixed z-3 cal font-hubot" v-if="open" >
+  <dialog class=" w-[100vw] h-[100vh] bg-transparent flex justify-center items-center fixed z-10 cal font-hubot" v-if="open" >
     <div @click="handleClose" class="overlay"></div>
-    <div class="flex z-5 md:h-8/10 w-6/10  h-fit items-center ">
-      <div class="bg-white flex flex-col justify-center items-center gap-7 px-20 py-5 md:px-32 md:py-28 flex-2 w-5/10 h-full">
+    <div class="flex z-5 lg:h-[80vh] md:w-6/10 w-full h-fit items-center ">
+      <div class="bg-white flex flex-col justify-center items-center gap-7 px-20 py-5 md:px-32 lg:py-1/10 flex-2 w-5/10 h-full">
         <ModalIcon class="min-h-[250px]"/>
         <h1 class="text-mp font-bold">Join the Koriki Waitlist 🚀</h1>
         <p>Get early access to the smarter way to grow your brand.</p>
