@@ -2,24 +2,24 @@
   <dialog class=" w-[100vw] h-[100vh] bg-transparent flex justify-center items-center fixed z-10 cal font-hubot" v-if="open && !success" >
     <div @click="handleClose" class="overlay"></div>
     <div class="flex z-5 lg:h-[80vh] md:w-6/10 w-full h-fit items-center ">
-      <div class="bg-white flex flex-col justify-center items-center gap-7 px-15 py-5 md:px-32 lg:py-1/10 flex-2 w-5/10 h-full">
-        <ModalIcon class="min-h-[250px]"/>
-        <h1 class="text-mp font-bold">Join the Koriki Waitlist 🚀</h1>
+      <div class="bg-white flex flex-col justify-center items-center gap-7 px-10 md:px-15 py-5 lg:px-32 lg:py-1/10 flex-2 w-5/10 h-full pb-20">
+        <ModalIcon class="h-[125px] md:min-h-[250px] "/>
+        <h1 class="md:text-mp font-bold text-mid text-center ">Join the Koriki Waitlist 🚀</h1>
         <p>Get early access to the smarter way to grow your brand.</p>
         <form @submit.prevent="handleSubmit" class="gap-6 flex flex-col w-full">
           <div class="flex md:flex-row flex-col gap-6 w-full ">
             <div class="flex flex-col w-full relative">
               <label class="absolute translate-y-[-12px] translate-x-1/5 bg-white" for="firstName">First Name*</label>
-              <input  required placeholder="John" type="text" class="w-full h-14 border-1 border-cod rounded-[15.26px] px-2" id="firstName" v-model="firstName">
+              <input  required placeholder="John" type="text" class="w-full md:h-14 border-1 border-cod rounded-[15.26px] px-2 h-12" id="firstName" v-model="firstName">
             </div>
             <div class="flex flex-col w-full">
               <label class="absolute translate-y-[-12px] translate-x-1/5 bg-white" for="lastName">Last Name*</label>
-              <input required placeholder="Doe" type="text" class="w-full h-14 border-1 border-cod rounded-[15.26px] px-2" v-model="lastName">
+              <input required placeholder="Doe" type="text" class="w-full md:h-14 h-12 border-1 border-cod rounded-[15.26px] px-2" v-model="lastName">
             </div>
           </div>
           <div class="flex flex-col">
             <label class="absolute translate-y-[-12px] translate-x-1/5 bg-white" for="email">Email Address*</label>
-            <input required placeholder="john24doe@gmail.com" type="email" class="w-full h-14 border-1 border-cod rounded-[15.26px] px-2 " v-model="email">
+            <input required placeholder="john24doe@gmail.com" type="email" class="w-full md:h-14 border-1 border-cod rounded-[15.26px] px-2 h-12 " v-model="email">
           </div>
           <button class="text-white bg-primary h-14 rounded-[15.26px] btn cursor-pointer">Join the waitlist</button>
         </form>
