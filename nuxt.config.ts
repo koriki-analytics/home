@@ -9,6 +9,7 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
+  
 
   modules: [
     '@nuxt/scripts',
@@ -17,6 +18,5 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/fonts',
     '@nuxt/eslint',
-    
   ]
 })

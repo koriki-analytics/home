@@ -10,7 +10,7 @@
             <p class="text-mid md:text-wedosubm  w-[255.7px] lg:w-[282px]">Streamline your strategy and scale faster.</p>
           </div>
         </div>
-        <div class="bg-tetiary max-w-360px w-fit rounded-b-[28px] z-2 scroll-up">
+        <div class="bg-tetiary max-w-360px w-fit rounded-b-[28px] z-4 scroll-up">
           <img src="../../assets/creators.png">
           <div class=" flex flex-col gap-2.5 px-[30.85px] py-[27.5px]">
             <h6 class="font-bold text-wedosubm md:text-p">Creators & Influencers</h6>
@@ -121,7 +121,7 @@
     yPercent: 0,
     scale: 1
   }, '>')
-
+  }
   const tlbounce = gsap.timeline({
     duration: 0.1,
     repeat:-1,
@@ -135,7 +135,6 @@
     )
 
     })
-  }
 })
 
 </script>

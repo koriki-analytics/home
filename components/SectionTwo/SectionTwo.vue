@@ -9,7 +9,7 @@
                 <p class="text-[14px] md:text-[32px]"> /ˈkɔːrɪki/ (noun)</p>
               </article>
             <article>
-              <p class="text-pmobile md:text-mp"><span class="font-semibold">Etymology</span>: Derived from the Yoruba Phase <span class="font-semibold">Ki Oriki</span>, meaning <span class="text-primary font-semibold">to sing one's praise </span></p>
+              <p class="text-pmobile md:text-mp"><span class="font-semibold">Etymology</span>: Derived from the Yoruba Phrase <span class="font-semibold">Ki Oriki</span>, meaning <span class="text-primary font-semibold">to sing one's praise </span></p>
               
             </article>
             <article class="flex gap-5 mt-10">
@@ -18,7 +18,7 @@
                   <span class="font-semibold">A belief </span>– Like our culture, we believe your brand’s story should be heard by those that matter
                 </li>
                 <li class="text-pmobile md:text-mp">
-                  <span class="font-semibold">A mission</span> – Fueled by data and technology, we transform brands to reach their full potential
+                  <span class="font-semibold">A mission</span> – Like our culture, we believe your brand’s story should be heard by those that matter. Our belief fuels our desire to transform brands leveraging data and technology.
                 </li>
               </ol>
             </article>

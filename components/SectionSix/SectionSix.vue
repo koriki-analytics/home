@@ -41,7 +41,7 @@
       </filter>
       </defs>
       </svg></button>
-        <p v-if="toggles" class=" text-textsm text-[13px]">Koriki aggregates data from all your marketing channels and simplifies the analytics, reporting and content management. Koriki is not just about creating content and scheduling posts, it’s about deriving insights from those posts and using those insights to fuel your growth.</p>
+        <p v-if="toggles" class=" text-textsm text-[13px]">Koriki currently supports websites, Facebook, Instagram, LinkedIn and YouTube. We will be adding more channels in the not-too-distant future so stay tuned!</p>
       </div>
       <div class="bg-white rounded-[4px] md:rounded-[14px] shadow-md border-[0.78px] border-primary pl-[19px] pr-[21px] py-6 btn">
         <button @click="handleTToggle" class="flex items-center justify-between w-full faq"><h6 class="text-smallest font-medium text-left">Can I use Koriki if I do not have a company?</h6> <svg id="3" class="move" width="50" height="50" viewBox="0 0 83 84" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@
       </filter>
       </defs>
       </svg></button>
-        <p v-if="togglet" class=" text-textsm text-[13px]">Koriki aggregates data from all your marketing channels and simplifies the analytics, reporting and content management. Koriki is not just about creating content and scheduling posts, it’s about deriving insights from those posts and using those insights to fuel your growth.</p>
+        <p v-if="togglet" class=" text-textsm text-[13px]">Yes, Koriki offers services to all brands – personal or corporate. If you have a social media account, Koriki is for you.</p>
       </div>
       <div class="bg-white rounded-[4px] md:rounded-[14px] shadow-md border-[0.78px] border-primary pl-[19px] pr-[21px] py-6 btn">
         <button @click="handleLToggle" class="flex items-center justify-between w-full faq"><h6 class="text-smallest font-medium text-left">Where do I sign up?</h6>
@@ -83,7 +83,7 @@
       </defs>
       </svg>
       </button> 
-        <p v-if="togglel" class=" text-textsm text-[13px]">Koriki aggregates data from all your marketing channels and simplifies the analytics, reporting and content management. Koriki is not just about creating content and scheduling posts, it’s about deriving insights from those posts and using those insights to fuel your growth.</p>
+        <p v-if="togglel" class=" text-textsm text-[13px]">We’re just about to launch. Join our waitlist, to be the first to know when we do</p>
       </div>
       <span class="text-[12px] text-[22px] font-semibold text-white my-9 text-center">Got more questions? <span class="font-normal">Reach out to us at <a class="text-link underline cursor-pointer" > hello@koriki.io</a></span></span>
 

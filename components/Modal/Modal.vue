@@ -1,25 +1,25 @@
 <template>
-  <dialog class=" w-[100vw] h-[100vh] bg-transparent flex justify-center items-center fixed z-10 cal font-hubot" v-if="open" >
+  <dialog class=" w-[100vw] h-[100vh] bg-transparent flex justify-center items-center fixed z-10 cal font-hubot" v-if="open && !success" >
     <div @click="handleClose" class="overlay"></div>
     <div class="flex z-5 lg:h-[80vh] md:w-6/10 w-full h-fit items-center ">
-      <div class="bg-white flex flex-col justify-center items-center gap-7 px-20 py-5 md:px-32 lg:py-1/10 flex-2 w-5/10 h-full">
+      <div class="bg-white flex flex-col justify-center items-center gap-7 px-15 py-5 md:px-32 lg:py-1/10 flex-2 w-5/10 h-full">
         <ModalIcon class="min-h-[250px]"/>
         <h1 class="text-mp font-bold">Join the Koriki Waitlist 🚀</h1>
         <p>Get early access to the smarter way to grow your brand.</p>
-        <form class="gap-6 flex flex-col w-full">
+        <form @submit.prevent="handleSubmit" class="gap-6 flex flex-col w-full">
           <div class="flex md:flex-row flex-col gap-6 w-full ">
             <div class="flex flex-col w-full relative">
-              <label class="absolute translate-y-[-12px] translate-x-1/5 bg-white" for="firstName">First Name</label>
-              <input placeholder="John" type="text" class="w-full h-14 border-1 border-cod rounded-[15.26px] px-2" id="firstName">
+              <label class="absolute translate-y-[-12px] translate-x-1/5 bg-white" for="firstName">First Name*</label>
+              <input  required placeholder="John" type="text" class="w-full h-14 border-1 border-cod rounded-[15.26px] px-2" id="firstName" v-model="firstName">
             </div>
             <div class="flex flex-col w-full">
-              <label class="absolute translate-y-[-12px] translate-x-1/5 bg-white" for="lastName">Last Name</label>
-              <input placeholder="Doe" type="text" class="w-full h-14 border-1 border-cod rounded-[15.26px] px-2">
+              <label class="absolute translate-y-[-12px] translate-x-1/5 bg-white" for="lastName">Last Name*</label>
+              <input required placeholder="Doe" type="text" class="w-full h-14 border-1 border-cod rounded-[15.26px] px-2" v-model="lastName">
             </div>
           </div>
           <div class="flex flex-col">
-            <label class="absolute translate-y-[-12px] translate-x-1/5 bg-white" for="email">Email Address</label>
-            <input placeholder="john24doe@gmail.com" type="email" class="w-full h-14 border-1 border-cod rounded-[15.26px] px-2">
+            <label class="absolute translate-y-[-12px] translate-x-1/5 bg-white" for="email">Email Address*</label>
+            <input required placeholder="john24doe@gmail.com" type="email" class="w-full h-14 border-1 border-cod rounded-[15.26px] px-2 " v-model="email">
           </div>
           <button class="text-white bg-primary h-14 rounded-[15.26px] btn cursor-pointer">Join the waitlist</button>
         </form>
@@ -30,6 +30,19 @@
         </button>
       </div>
       
+    </div>
+  </dialog>
+
+  <dialog class=" w-[100vw] h-[100vh] bg-transparent flex justify-center items-center fixed z-10 cal font-hubot" v-if="open && success" >
+    <div @click="handleClose" class="overlay"></div>
+    <div class="flex z-5 lg:h-[80vh] md:w-5/10 w-full h-fit items-center ">
+      <div class="bg-white flex flex-col justify-center items-center gap-7 px-5 md:px-20 py-5 lg:px-32 lg:py-1/10 flex-2 w-5/10 h-full border-[2px] border-dashed border-primary rounded-[30px]">
+        <Success class="min-h-[250px]"/>
+        <h1 class="text-wedosubm font-bold">You're In!</h1>
+        <p class="text-center">We’re excited to help you tell your brand’s story like never before.
+          You’ll be the first to know when we launch.</p>
+        <button @click="handleClose" class="text-white w-1/2 font-semibold text-wedosubm h-16 bg-primary rounded-[15px] btn cursor-pointer">Back to home</button>
+      </div>
     </div>
   </dialog>
 </template>
@@ -47,16 +60,48 @@
     opacity: 0.8
     
   }
-  .cal{
-    
-  }
 </style>
 
 <script lang='ts' setup>
+
 import {openModal} from '../composables/states';
+import { useSuccess } from '../composables/states';
+
+
+
+  const firstName = ref<string>("")
+  const lastName = ref<string>("")
+  const email = ref<string>("")
   const open = openModal()
+  const success = useSuccess()
 
   const handleClose =() => {
     open.value = !open.value
   }
+
+  const handleSubmit = async() =>{
+    
+    const fullName = firstName.value + " " + lastName.value
+    const postEmail = email.value
+    try{
+      const response = await $fetch('https://backend-main-dev-a2cf.up.railway.app/waitlist', {
+      method: 'POST',
+      body: {
+        full_name: fullName,
+        email: postEmail
+      }
+    })
+    console.log(response)
+    if(response.status == 'success'){
+      success.value =!success.value
+    }
+    }
+    
+    catch{
+
+    }
+
+    
+  }
+
 </script>
