@@ -21,8 +21,8 @@
             <label class="absolute translate-y-[-12px] translate-x-1/5 bg-white" for="email">Email Address*</label>
             <input required placeholder="john24doe@gmail.com" type="email" class=" w-full md:h-14 border-1 border-cod rounded-[15.26px] px-2 h-12 " v-model="email">
           </div>
-          <button class="text-white bg-primary h-14 rounded-[15.26px] btn cursor-pointer " id="formButton" v-if="!loading">Join the waitlist</button>
-          <button class="text-white bg-primary h-14 rounded-[15.26px] btn cursor-pointer flex justify-center gap-2 items-center hidden unhide " id="formButton">
+          <button class="text-white bg-primary h-14 rounded-[15.26px] btn cursor-pointer w-full" id="formButton " v-if="!loading">Join the waitlist</button>
+          <button class="text-white bg-primary h-14 rounded-[15.26px] btn cursor-pointer flex justify-center gap-2 items-center hidden unhide w-full" id="formButton">
             <div class="bg-white size-[30px] rounded-[15px] test "></div>
             <div class="bg-white size-[20px] rounded-[10px] test "></div>
             <div class="bg-white size-[10px] rounded-[5px] test " ></div>
@@ -31,7 +31,7 @@
         </form>
       </div>
       <div class=" hidden lg:flex flex-1 w-2/10 h-full bg-[url(@/assets/image.jpg)] bg-cover bg-repeat-none flex items-start justify-end px-3 py-5">
-        <button @click="handleClose" class="text-white size-fit">
+        <button @click="handleClose" class="text-white size-fit ">
           <CloseIcon/>
         </button>
       </div>
@@ -47,7 +47,7 @@
         <h1 class="text-wedosubm font-bold">You're In!</h1>
         <p class="text-center">We’re excited to help you tell your brand’s story like never before.
           You’ll be the first to know when we launch.</p>
-        <button @click="handleClose" class="text-white w-1/2 font-semibold text-wedosubm h-16 bg-primary rounded-[15px] btn cursor-pointer">Back to home</button>
+        <button @click="handleClose" class="text-white w-1/2 font-semibold text-wedosubm h-16 bg-primary rounded-[15px] btn cursor-pointer ">Back to home</button>
       </div>
     </div>
   </dialog>
@@ -87,6 +87,7 @@ import gsap from 'gsap'
 
   const handleClose =() => {
     open.value = !open.value
+    success.value = false
   }
 
   
