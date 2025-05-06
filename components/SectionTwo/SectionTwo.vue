@@ -18,7 +18,7 @@
                   <span class="font-semibold">A belief </span>– Like our culture, we believe your brand’s story should be heard by those that matter
                 </li>
                 <li class="text-pmobile md:text-mp">
-                  <span class="font-semibold">A mission</span> – Like our culture, we believe your brand’s story should be heard by those that matter. Our belief fuels our desire to transform brands leveraging data and technology.
+                  <span class="font-semibold">A mission</span> – Koriki is the ultimate tool for brands and creators who want to win. We bring all your marketing data into one easy-to-use dashboard so you can see what’s working and make smarter decisions — fast.
                 </li>
               </ol>
             </article>

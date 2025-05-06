@@ -1,8 +1,8 @@
 <template>
   <section class="flex flex-col lg:flex-row px-[22px] md:px-0 font-hubot "  >
     <div class=" w-full h-full flex mt-[108px] lg:pl-[40px] xl:pl-25.25 lg:pt-10 justify-center lg:justify-start flex-1 ">
-      <div class="flex flex-col items-center lg:items-start max-w-full" v-for="(i, index) in visible" :key= i.id>
-          <h1 :id = i.id class='text-mdashboard md:text-dashboard w-[352px] md:w-[580px] 2xl:w-full 2xl:h-[340px] text-center  lg:text-[50px] h-60 md:h-[385px] lg:text-left lg:h-[225px]   lg:text-left font-bold 2xl:text-[75px] lg:w-full tl'>{{ i.main }}<span class="text-primary">{{ i.mainTwo }}</span></h1>
+      <div class="flex flex-col items-center lg:items-start max-w-full" v-for="(i) in visible" :key= i.id>
+          <h1 :id = i.id class='text-mdashboard md:text-dashboard w-[352px] md:w-[580px] 2xl:w-full 2xl:h-[340px] text-center  lg:text-[50px] h-60 md:h-[385px] lg:text-left lg:h-[225px] lg:text-left font-bold 2xl:text-[75px] lg:w-full tl'>{{ i.main }}<span class="text-primary">{{ i.mainTwo }}</span></h1>
           <p class="text-p text-center lg:text-left mt-5 w-[352px] md:w-[580px] lg:w-9/10 2xl:h-[72px]">{{ i.sub }}</p>
           <p class="text-p text-center lg:text-left mt-5 w-[352px] md:w-[580px] lg:w-9/10 hidden">with Ease</p>
           <button class="bg-primary text-btn w-[188px] md:w-[219px] h-[52px] rounded-[15px] mt-[14px] md:mt-10 md:40px btn" @click="handleModal">Join the waitlist</button>
@@ -11,7 +11,7 @@
       </div>
       
     <div class=" lg:bg-[url(../../assets/Frame.svg)] bg-cover md:flex-1 flex  md:mt-0 bg-no-repeat justify-center md:pt-30 w-full mt-14 lg:pt-40">
-      <img src="../../assets/dashboard.png" class="z-1  flex lg:shrink-1 slide-left size-fit">
+      <img src="../../assets/dashboard.png" class="size-fit"/>
     </div>
   </section>
 </template>
@@ -19,7 +19,7 @@
 
 <script lang="ts" setup>
 import { openModal } from '../composables/states';
-import gsap from 'gsap'
+import {gsap} from 'gsap'
 
 
   const open = openModal()

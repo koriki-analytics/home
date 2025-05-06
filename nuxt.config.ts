@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { Title } from '#components'
 import tailwindcss from '@tailwindcss/vite'
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
@@ -9,7 +10,12 @@ export default defineNuxtConfig({
       tailwindcss(),
     ],
   },
-  
+  app:{
+    head:{
+      title: 'Koriki | waitlist',
+      viewport: 'width=device-width, initial-scale=1'
+    }
+  },
 
   modules: [
     '@nuxt/scripts',
