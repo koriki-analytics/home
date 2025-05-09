@@ -1,9 +1,9 @@
 <template>
   <dialog class=" w-[100vw] h-[100vh] bg-transparent flex justify-center items-center fixed z-10 cal font-hubot" v-if="open && !success" >
     <div @click="handleClose" class="overlay"></div>
-    <div class="flex z-5 lg:h-[80vh] md:w-6/10 w-full h-fit items-center ">
-      <div class="bg-white flex flex-col justify-center items-center gap-7 px-10 md:px-15 py-5  xl:px-32 lg:py-1/10 flex-2 w-5/10 h-full pb-20">
-        <ModalIcon class="h-[125px] md:min-h-[250px] "/>
+    <div class="flex z-5 md:w-6/10 w-full lg:h-[80vh] h-fit items-center ">
+      <div class="bg-white flex flex-col justify-center items-center gap-7 px-10 md:px-15 py-5  xl:px-32 lg:py-1/10 flex-2 w-5/10 h-full py-15 ">
+        <ModalIcon class="h-[125px] md:min-h-[250px] newsvg" />
         <h1 class="md:text-mp font-bold text-mid text-center ">Join the Koriki Waitlist 🚀</h1>
         <p>Get early access to the smarter way to grow your brand.</p>
         <form @submit.prevent="handleSubmit" class="gap-6 flex flex-col w-full items-center">
@@ -65,6 +65,12 @@
     z-index: 1;
     opacity: 0.8
     
+  }
+
+  @media screen and (max-height: 850px){
+    .newsvg{
+      display: none;
+    }
   }
 
 
@@ -130,15 +136,12 @@ import gsap from 'gsap'
         email: postEmail
       }
     })
-    console.log(response)
-    if(response.status == 'success'){
       loading.value = !loading.value
       success.value =!success.value
     }
-    }
     
-    catch{
-
+    catch(error){
+      console.log(error)
     }
 
     
