@@ -11,7 +11,8 @@
       </div>
       
     <div class=" lg:bg-[url(../../assets/Frame.svg)] bg-cover md:flex-1 flex  md:mt-0 bg-no-repeat justify-center md:pt-30 w-full mt-14 lg:pt-40">
-      <img src="../../assets/dashboard.png" class="size-fit"/>
+      <img src="../../assets/dashboard.png" class=" hidden md:block size-fit"/>       
+      <Dashboard/>
     </div>
   </section>
 </template>

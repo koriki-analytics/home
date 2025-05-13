@@ -1,8 +1,8 @@
 <template>
   <dialog class=" w-[100vw] h-[100vh] bg-transparent flex justify-center items-center fixed z-10 cal font-hubot" v-if="open && !success" >
     <div @click="handleClose" class="overlay"></div>
-    <div class="flex z-5 md:w-6/10 w-full lg:h-[80vh] h-fit items-center ">
-      <div class="bg-white flex flex-col justify-center items-center gap-7 px-10 md:px-15 py-5  xl:px-32 lg:py-1/10 flex-2 w-5/10 h-full py-15 ">
+    <div class="flex z-5 md:w-fit lg:w-6/10 w-full lg:h-[80vh] h-fit items-center ">
+      <div class="bg-white flex flex-col justify-center items-center gap-7 px-10 md:px-15 py-5  2xl:px-32 lg:py-1/10 flex-2 w-5/10 h-full py-15 ">
         <ModalIcon class="h-[125px] md:min-h-[250px] newsvg" />
         <h1 class="md:text-mp font-bold text-mid text-center ">Join the Koriki Waitlist 🚀</h1>
         <p>Get early access to the smarter way to grow your brand.</p>
@@ -21,8 +21,8 @@
             <label class="absolute translate-y-[-12px] translate-x-1/5 bg-white" for="email">Email Address*</label>
             <input required placeholder="john24doe@gmail.com" type="email" class=" w-full md:h-14 border-1 border-cod rounded-[15.26px] px-2 h-12 " v-model="email">
           </div>
-          <button class="text-white bg-primary h-14 rounded-[15.26px] btn cursor-pointer w-full" id="formButton " v-if="!loading">Join the waitlist</button>
-          <button class="text-white bg-primary h-14 rounded-[15.26px] btn cursor-pointer flex justify-center gap-2 items-center hidden unhide w-full" id="formButton">
+          <button class="text-white bg-primary h-14 rounded-[15.26px] btn cursor-pointer w-full max-w-[480px] md:max-w-full" id="formButton " v-if="!loading">Join the waitlist</button>
+          <button class="text-white bg-primary h-14 rounded-[15.26px] btn cursor-pointer flex justify-center gap-2 items-center hidden unhide w-full max-w-[480px]" id="formButton">
             <div class="bg-white size-[30px] rounded-[15px] test "></div>
             <div class="bg-white size-[20px] rounded-[10px] test "></div>
             <div class="bg-white size-[10px] rounded-[5px] test " ></div>
