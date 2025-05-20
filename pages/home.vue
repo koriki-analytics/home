@@ -1,0 +1,15 @@
+<template>
+  <Navbar/>
+    <main>
+      <Modal/>
+      <SectionOne/>
+      <SectionTwo/>
+      <SectionThree/>
+      <SectionFour/>
+      <SectionFive/>
+      <ChosePlan/>
+      <Testimonials/>
+      <SectionSix/>
+      <SectionSeven/>
+    </main>
+</template>
