@@ -18,7 +18,7 @@ const restricted = ['reclaim data or other content from the Website to develop o
   <section class="flex flex-col items-center">
     <Navbar/>
     <div class="w-8/10 flex flex-col gap-5 mt-10">
-      <h1 class="text-[4em] font-extrabold">Terms and Conditionsy</h1>
+      <h1 class="text-[4em] font-extrabold">Terms and Conditions</h1>
 
   <article>
     <p>This website is owned and managed by Koriki Analytics Technologies Limited ("Koriki", "we", "our" or "us") (“Website”). </p>
